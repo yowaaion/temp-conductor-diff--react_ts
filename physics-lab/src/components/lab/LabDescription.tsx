@@ -88,34 +88,7 @@ const LabDescription: React.FC = () => {
                         <AccordionDetails>
                             <Collapse in={expanded === 'theory'} timeout={500}>
                                 {/* Отображение теоретического материала с анимацией */}
-                                {LAB_DESCRIPTIONS.theory.map((item, index) => (
-                                    <Fade 
-                                        in={expanded === 'theory'} 
-                                        timeout={{ enter: 800 + index * 200 }}
-                                        key={index}
-                                    >
-                                        <Box sx={{ mb: 3 }}>
-                                            <Typography 
-                                                variant="subtitle1" 
-                                                fontWeight="bold"
-                                                color="primary"
-                                                gutterBottom
-                                            >
-                                                {item.title}
-                                            </Typography>
-                                            <Typography 
-                                                variant="body1" 
-                                                sx={{ 
-                                                    whiteSpace: 'pre-line',
-                                                    pl: 2,
-                                                    borderLeft: '2px solid rgba(25, 118, 210, 0.2)'
-                                                }}
-                                            >
-                                                {item.content}
-                                            </Typography>
-                                        </Box>
-                                    </Fade>
-                                ))}
+                            
                             </Collapse>
                         </AccordionDetails>
                     </Accordion>
